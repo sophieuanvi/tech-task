@@ -1,0 +1,20 @@
+@import "src/app/styles/colors";
+
+.field {
+  width: 400px;
+}
+
+.actions {
+  text-align: end;
+}
+.response {
+  margin-top: 10px;
+  text-align:  center;
+  color: $green;
+}
+
+.error {
+  margin-top: 10px;
+  text-align:  center;
+  color: $red;
+}

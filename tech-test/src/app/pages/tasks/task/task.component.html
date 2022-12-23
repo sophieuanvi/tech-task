@@ -1,0 +1,36 @@
+<mat-card class="example-card" >
+  <mat-card-content>
+    <div  class="actions">
+      <button mat-icon-button color="primary" (click)="openDialog($event)" >
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn"  (click)="deleteTask($event)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+
+    <table>
+      <tr>
+        <th>Label</th>
+        <td>{{todo.label}}</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>{{todo.category}}</td>
+      </tr>
+      <tr>
+        <th>Done</th>
+        <td *ngIf="!!todo.done, else done ">{{todo.done}}</td>
+        <ng-template #done>
+         <td>Task dont Done yet!</td>
+        </ng-template>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>{{todo.description}}</td>
+      </tr>
+    </table>
+
+  </mat-card-content>
+</mat-card>
+

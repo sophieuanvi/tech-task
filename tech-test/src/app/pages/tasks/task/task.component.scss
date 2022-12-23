@@ -1,0 +1,27 @@
+.example-card {
+  max-width: 400px;
+  height: 200px;
+}
+
+table {
+  border-collapse:separate;
+  border-spacing: 0 1em;
+
+  tr {
+
+    th {
+      display: block;
+      width: 100px;
+      text-align: start;
+    }
+
+  }
+
+}
+
+.actions {
+  text-align: end;
+}
+
+
+

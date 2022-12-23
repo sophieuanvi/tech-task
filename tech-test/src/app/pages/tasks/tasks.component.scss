@@ -1,0 +1,98 @@
+@import "src/app/styles/colors";
+.container {
+  max-width: 1600px;
+  padding: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  span {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+
+  mat-toolbar, mat-toolbar-row {
+    background-color: transparent;
+    max-width: 1400px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  mat-toolbar-row {
+    height: 45px;
+  }
+
+  mat-divider {
+    width: 100%;
+  }
+
+
+  mat-toolbar:nth-child(2) {
+    margin-left: 20px;
+  }
+
+  mat-grid-list {
+    margin-top: 20px;
+  }
+  mat-grid-tile {
+    width: 400px;
+  }
+
+  .toolbar-spacer {
+    flex: 1 1 auto;
+  }
+
+
+  .custom-form-field {
+    font-size: 5px;
+    margin-top: 3px;
+    margin-bottom: -1.25em;
+    margin-left: 50px;
+
+    @media screen  and (max-width: 768px){
+      margin-left: 10px;
+
+    }
+
+    input.mat-input-element, .mat-form-field-suffix {
+      padding-bottom: 2px;
+      font-size: 16px;
+    }
+
+    mat-icon {
+      font-size: 22px;
+      color: $light-gray;
+    }
+  }
+
+  .task-container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 450px);
+    grid-auto-rows: auto;
+    grid-gap: 2rem;
+
+  }
+
+  .btn-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+
+// this breakpoints goes another file ussualy
+
+@media screen  and (max-width: 768px){
+  .large-button, .large-screen-title{
+    display: none;
+  }
+
+}
+@media screen  and (min-width: 768px){
+  .small-button, .small-screen-title{
+    display: none;
+  }
+
+}

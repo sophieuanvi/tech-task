@@ -1,0 +1,41 @@
+<div [formGroup]="taskForm">
+  <mat-form-field appearance="outline" class="field">
+    <mat-label>Label</mat-label>
+    <input matInput formControlName="label">
+
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="field">
+    <mat-label>Category</mat-label>
+    <mat-select formControlName="category">
+      <mat-option value="house">House</mat-option>
+      <mat-option value="bureaucracy">Bureaucracy</mat-option>
+    </mat-select>
+
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="field">
+    <mat-label>Description</mat-label>
+    <textarea matInput
+              cdkTextareaAutosize
+              cdkAutosizeMinRows="4"
+              cdkAutosizeMaxRows="8"
+              formControlName="description"></textarea>
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="date">
+    <mat-label>Done</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="done" >
+    <mat-hint>Choose task Done Date</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <p class="response" *ngIf="showSuccessText">
+    {{succsessText}}
+  </p>
+  <p class="response" *ngIf="showErrorText">
+    {{errorText}}
+  </p>
+  <div class="actions">
+    <button mat-raised-button color="primary" (click)="onSave()" >Save
+    </button>
+  </div>
+</div>
